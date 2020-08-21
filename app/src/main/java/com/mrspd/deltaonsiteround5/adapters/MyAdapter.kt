@@ -53,7 +53,6 @@ class MyAdapter(var context: Context) :
         holder.tvFileName.text = nameOfFIle
         holder.setItemClickListener(object : MainActivity.ITemClickListener {
             override fun OnClick(view: View?, position: Int) {
-                Log.w("QWE", "ASD")
                 if (holder.IvRight.visibility == View.GONE && holder.ivDown.visibility == View.GONE) {
                 } else if (holder.IvRight.visibility == View.VISIBLE) {
                     holder.IvRight.visibility = View.GONE
@@ -82,6 +81,7 @@ class MyAdapter(var context: Context) :
             }
         })
     }
+
     private fun getFiles3(
         files: Array<File>?,
         holder: MyViewHolder
@@ -98,6 +98,7 @@ class MyAdapter(var context: Context) :
             }
         }
     }
+
     private fun getFiles4(
         files: Array<File>?,
         holder: MyViewHolder,

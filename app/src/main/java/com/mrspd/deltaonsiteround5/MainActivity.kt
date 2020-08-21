@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
+import android.util.Log.d
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             if (files != null) {
                 for (file in files) {
                     filesKaList.add(file.path)
+                    d("gsg","${file.name}")
                 }
                 mMyAdapter = MyAdapter(applicationContext)
                 mMyAdapter!!.addAllFiles(filesKaList)
